@@ -19,7 +19,6 @@
 #define KC_CTLC   LCTL(KC_C)
 #define KC_CTLV   LCTL(KC_V)
 
-#define KC_SFTA   SFT_T(KC_A)
 #define KC_CTLR   CTL_T(KC_R)
 #define KC_GUIS   GUI_T(KC_S)
 #define KC_ALTT   ALT_T(KC_T)
@@ -27,9 +26,7 @@
 #define KC_ALTN   ALT_T(KC_N)
 #define KC_GUIE   GUI_T(KC_E)
 #define KC_CTLI   CTL_T(KC_I)
-#define KC_SFTO   SFT_T(KC_O)
 
-#define KC_SFT1   SFT_T(KC_1)
 #define KC_CTL2   CTL_T(KC_2)
 #define KC_GUI3   GUI_T(KC_3)
 #define KC_ALT4   ALT_T(KC_4)
@@ -37,41 +34,40 @@
 #define KC_ALT7   ALT_T(KC_7)
 #define KC_GUI8   GUI_T(KC_8)
 #define KC_CTL9   CTL_T(KC_9)
-#define KC_SFT0   SFT_T(KC_0)
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[BASE] = LAYOUT(
         KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,   KC_NO,                          KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        KC_TAB,   KC_Q,     KC_W,     KC_F,     KC_P,    KC_G,                           KC_J,     KC_L,     KC_U,     KC_Y,     KC_SCLN,  KC_ESC,
-        KC_BSPC,  KC_SFTA,  KC_CTLR,  KC_GUIS,  KC_ALTT, KC_D,                           KC_H,     KC_ALTN,  KC_GUIE,  KC_CTLI,  KC_SFTO,  KC_QUOT,
-        KC_LSPO,  KC_MEHZ,  KC_X,     KC_C,     KC_V,    KC_B,     KC_LALT,  KC_RALT,    KC_K,     KC_M,     KC_COMM,  KC_DOT,   KC_HYSL,  KC_RSPC,
-                                            KC_LCTL,  KC_SPC,   MO_SYMB,       MO_MVMT,    KC_ENT,   KC_RCTL
+        KC_ESC,   KC_Q,     KC_W,     KC_F,     KC_P,    KC_G,                           KC_J,     KC_L,     KC_U,     KC_Y,     KC_SCLN,  KC_BSPC,
+        KC_TAB,   KC_A,     KC_CTLR,  KC_GUIS,  KC_ALTT, KC_D,                           KC_H,     KC_ALTN,  KC_GUIE,  KC_CTLI,  KC_O,     KC_QUOT,
+        KC_LSPO,  KC_MEHZ,  KC_X,     KC_C,     KC_V,    KC_B,     KC_NO,    KC_NO,      KC_K,     KC_M,     KC_COMM,  KC_DOT,   KC_HYSL,  KC_RSPC,
+                                            KC_NO,    MO_SYMB,  KC_SPC,        KC_ENT,     MO_MVMT,  KC_NO
   ),
 	[SYMB] = LAYOUT(
         KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,   KC_NO,                          KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        KC_TAB,   KC_F1,    KC_F2,    KC_F3,    KC_F4,   KC_F5,                          KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,
-        KC_BSPC,  KC_SFT1,  KC_CTL2,  KC_GUI3,  KC_ALT4, KC_5,                           KC_6,     KC_ALT7,  KC_GUI8,  KC_CTL9,  KC_SFT0,  KC_F12,
-        KC_LSPO,  KC_LGUI,  KC_COLN,  KC_LBRC,  KC_RBRC, TO(3),    KC_NO,    KC_RALT,    KC_GRV,   KC_MINS,  KC_EQL,   KC_BSLS,  KC_SLSH,  KC_RSPC,
-                                            KC_NO,    KC_NO,    KC_TRNS,       MO_UNRC,    KC_ENT,   KC_RCTL
+        KC_ESC,   KC_F1,    KC_F2,    KC_F3,    KC_F4,   KC_F5,                          KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,
+        KC_TAB,   KC_1,     KC_CTL2,  KC_GUI3,  KC_ALT4, KC_5,                           KC_6,     KC_ALT7,  KC_GUI8,  KC_CTL9,  KC_0,     KC_F12,
+        KC_LSPO,  KC_DEL,   KC_COLN,  KC_LBRC,  KC_RBRC, TO(3),    KC_NO,    KC_NO,      KC_GRV,   KC_MINS,  KC_EQL,   KC_BSLS,  KC_SLSH,  KC_RSPC,
+                                            KC_NO,    KC_TRNS,  KC_NO,         KC_ENT,     MO_UNRC,  KC_NO
   ),
 	[MVMT] = LAYOUT(
         KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,   KC_NO,                          KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        KC_TAB,   KC_MPLY,  KC_WH_U,  KC_MS_U,  KC_WH_D, KC_PSCR,                        KC_MUTE,  KC_TAB,   KC_DEL,   KC_INS,   KC_NO,    KC_ESC,
-        KC_BSPC,  KC_MNXT,  KC_MS_L,  KC_MS_D,  KC_MS_R, KC_PAUS,                        KC_VOLU,  KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_QUOT,
-        KC_LSPO,  KC_MPRV,  KC_WBAK,  KC_LCTL,  KC_WFWD, TO(3),    KC_LALT,  KC_NO,      KC_VOLD,  KC_HOME,  KC_PGDN,  KC_PGUP,  KC_END,   KC_RSPC,
-                                            KC_LCTL,  KC_BTN1,  KC_BTN2,         KC_TRNS,  KC_NO,    KC_NO
+        KC_ESC,   KC_MPLY,  KC_WH_U,  KC_MS_U,  KC_WH_D, KC_PSCR,                        KC_MUTE,  KC_TAB,   KC_DEL,   KC_INS,   KC_NO,    KC_BSPC,
+        KC_TAB,   KC_MNXT,  KC_MS_L,  KC_MS_D,  KC_MS_R, KC_PAUS,                        KC_VOLU,  KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_QUOT,
+        KC_LSPO,  KC_MPRV,  KC_WBAK,  KC_LCTL,  KC_WFWD, TO(3),    KC_NO,    KC_NO,      KC_VOLD,  KC_HOME,  KC_PGDN,  KC_PGUP,  KC_END,   KC_RSPC,
+                                            KC_NO,    KC_BTN1,  KC_BTN2,         KC_NO,    KC_TRNS,  KC_NO
   ),
 	[UNRC] = LAYOUT(
         KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,   KC_NO,                          KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        KC_TAB,   RESET,    KC_NO,    KC_D,     KC_NO,   KC_NO,                          KC_NO,    KC_NO,    KC_H,     KC_NO,    KC_NO,    KC_ESC,
-        KC_BSPC,  KC_Q,     KC_Z,     KC_G,     KC_B,    KC_NO,                          KC_NO,    KC_K,     KC_J,     KC_SLSH,  KC_SCLN,  KC_QUOT,
+        KC_ESC,   RESET,    KC_NO,    KC_D,     KC_NO,   KC_NO,                          KC_NO,    KC_NO,    KC_H,     KC_NO,    KC_NO,    KC_BSPC,
+        KC_TAB,   KC_Q,     KC_Z,     KC_G,     KC_B,    KC_NO,                          KC_NO,    KC_K,     KC_J,     KC_SLSH,  KC_SCLN,  KC_QUOT,
         KC_LSPO,  KC_CTLZ,  KC_CTLX,  KC_CTLC,  KC_CTLV, KC_NO,    TO(1),    TO(2),      KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_RSPC,
-                                            KC_NO,    KC_NO,    TO(0),           KC_TRNS,  KC_NO,    KC_NO
+                                            KC_NO,    TO(0),   KC_NO,            KC_NO,    KC_TRNS,  KC_NO
   )
 };
 

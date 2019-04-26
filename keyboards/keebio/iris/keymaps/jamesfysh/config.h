@@ -28,10 +28,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define MASTER_RIGHT
 // #define EE_HANDS
 
+/* Mod-Tap configuration */
 #define TAPPING_TERM              300
-#define PERMISSIVE_HOLD
 #define IGNORE_MOD_TAP_INTERRUPT
 
+/* Mousekey configuration */
 #define MOUSEKEY_INTERVAL         20
 #define MOUSEKEY_DELAY            30
 #define MOUSEKEY_TIME_TO_MAX      60
