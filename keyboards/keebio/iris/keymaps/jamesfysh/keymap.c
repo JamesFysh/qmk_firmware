@@ -11,9 +11,6 @@
 #define MO_MVMT   MO(2)
 #define MO_UNRC   MO(3)
 #define TO_BASE   TO(0)
-#define TO_SYMB   TO(1)
-#define TO_MVMT   TO(2)
-#define TO_UNRC   TO(3)
 
 
 // base layer mod-taps
@@ -44,6 +41,7 @@
 #define KC_CTLX   LCTL(KC_X)
 #define KC_CTLC   LCTL(KC_C)
 #define KC_CTLV   LCTL(KC_V)
+#define KC_CTLB   LCTL(KC_B)
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -52,7 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ////////|/////////|/////////|/////////|/////////|////////|///////////////////////////////|/////////|/////////|/////////|/////////|/////////|/////////
         KC_ESC,   KC_Q,     KC_W,     KC_F,     KC_P,    KC_G,                           KC_J,     KC_L,     KC_U,     KC_Y,     KC_SCLN,  KC_BSPC,//
         KC_TAB,   KC_A,     KC_CTLR,  KC_GUIS,  KC_ALTT, KC_D,                           KC_H,     KC_ALTN,  KC_GUIE,  KC_CTLI,  KC_O,     KC_QUOT,//
-        KC_LSPO,  KC_MEHZ,  KC_X,     KC_C,     KC_V,    KC_B,     KC_NO,    KC_NO,      KC_K,     KC_M,     KC_COMM,  KC_DOT,   KC_HYSL,  KC_RSPC,//
+        KC_LSFT,  KC_MEHZ,  KC_X,     KC_C,     KC_V,    KC_B,     KC_NO,    KC_NO,      KC_K,     KC_M,     KC_COMM,  KC_DOT,   KC_HYSL,  KC_RSFT,//
                                             KC_NO,    KC_SPC,   MO_SYMB,        MO_MVMT,   KC_ENT,   KC_NO                                         //
 ////////////////////////////////////////////|/////////|/////////|///////////////|//////////|/////////|///////////////////////////////////////////////
   ),
@@ -61,7 +59,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ////////|/////////|/////////|/////////|/////////|////////|///////////////////////////////|/////////|/////////|/////////|/////////|/////////|/////////
         KC_TRNS,  KC_F1,    KC_F2,    KC_F3,    KC_F4,   KC_F5,                          KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_TRNS,//
         KC_TRNS,  KC_1,     KC_CTL2,  KC_GUI3,  KC_ALT4, KC_5,                           KC_6,     KC_ALT7,  KC_GUI8,  KC_CTL9,  KC_0,     KC_TRNS,//
-        KC_TRNS,  KC_F11,   KC_F12,   KC_LBRC,  KC_RBRC, TO_UNRC,  KC_NO,    KC_NO,      KC_GRV,   KC_MINS,  KC_EQL,   KC_BSLS,  KC_SLSH,  KC_TRNS,//
+        KC_TRNS,  KC_F11,   KC_F12,   KC_LBRC,  KC_RBRC, KC_NO,    KC_NO,    KC_NO,      KC_GRV,   KC_MINS,  KC_EQL,   KC_BSLS,  KC_SLSH,  KC_TRNS,//
                                             KC_NO,    KC_TRNS,  KC_NO,          MO_UNRC,   KC_TRNS,  KC_NO                                         //
 ////////////////////////////////////////////|/////////|/////////|///////////////|//////////|/////////|///////////////////////////////////////////////
   ),
@@ -70,8 +68,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ////////|/////////|/////////|/////////|/////////|////////|///////////////////////////////|/////////|/////////|/////////|/////////|/////////|/////////
         KC_TRNS,  KC_MPLY,  KC_WH_U,  KC_UP,    KC_WH_D, KC_PSCR,                        KC_MUTE,  MOD_MEH,  KC_DEL,   KC_INS,   MOD_HYPR, KC_TRNS,//
         KC_TRNS,  KC_MNXT,  KC_LEFT,  KC_DOWN,  KC_RGHT, KC_PAUS,                        KC_VOLU,  KC_ALHM,  KC_GUPD,  KC_CTPU,  KC_END,   KC_TRNS,//
-        KC_TRNS,  KC_MPRV,  KC_WBAK,  KC_NO,    KC_WFWD, TO_UNRC,  KC_NO,    KC_NO,      KC_VOLD,  KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_TRNS,//
-                                            KC_NO,    KC_TRNS,  KC_TRNS,        KC_NO,     KC_TRNS,  KC_NO                                         //
+        KC_TRNS,  KC_MPRV,  KC_WBAK,  KC_NO,    KC_WFWD, KC_NO,    KC_NO,    KC_NO,      KC_VOLD,  KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_TRNS,//
+                                            KC_NO,    KC_TRNS,  MO_UNRC,        KC_NO,     KC_TRNS,  KC_NO                                         //
 ////////////////////////////////////////////|/////////|/////////|///////////////|//////////|/////////|///////////////////////////////////////////////
   ),
 	[UNRC] = LAYOUT(
@@ -79,8 +77,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ////////|/////////|/////////|/////////|/////////|////////|///////////////////////////////|/////////|/////////|/////////|/////////|/////////|/////////
         KC_TRNS,  RESET,    KC_NO,    KC_D,     KC_NO,   KC_NO,                          KC_NO,    KC_NO,    KC_H,     KC_NO,    KC_NO,    KC_TRNS,//
         KC_TRNS,  KC_Q,     KC_Z,     KC_G,     KC_B,    KC_NO,                          KC_NO,    KC_K,     KC_J,     KC_SLSH,  KC_SCLN,  KC_TRNS,//
-        KC_TRNS,  KC_CTLZ,  KC_CTLX,  KC_CTLC,  KC_CTLV, KC_NO,    KC_NO,    KC_NO,      KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_TRNS,//
-                                            KC_NO,    TO_BASE,  TO_SYMB,        TO_MVMT,   KC_TRNS,  KC_NO                                         //
+        KC_TRNS,  KC_CTLZ,  KC_CTLX,  KC_CTLC,  KC_CTLV, KC_NO,    KC_NO,    KC_NO,      KC_NO,    KC_LPRN,  KC_RPRN,  KC_COLN,  KC_NO,    KC_TRNS,//
+                                            KC_NO,    KC_TRNS,  KC_TRNS,        KC_TRNS,   KC_TRNS,  KC_NO                                         //
 ////////////////////////////////////////////|/////////|/////////|///////////////|//////////|/////////|///////////////////////////////////////////////
   )
 };
