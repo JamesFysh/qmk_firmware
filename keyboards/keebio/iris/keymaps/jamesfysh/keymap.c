@@ -93,18 +93,8 @@ uint32_t layer_state_set_user(uint32_t state) {
     writePinLow(RED_PIN);
     writePinLow(GRN_PIN);
     writePinLow(BLU_PIN);
-	switch (biton32(state)) {
-		case SYMB:
-            writePinHigh(RED_PIN);
-			break;
-		case MVMT:
-            writePinHigh(GRN_PIN);
-			break;
-		case UNRC:
-            writePinHigh(BLU_PIN);
-			break;
-		default:
-			break;
-	}
+    if (state & 1<<SYMB) { writePinHigh(RED_PIN); }
+    if (state & 1<<MVMT) { writePinHigh(GRN_PIN); }
+    if (state & 1<<UNRC) { writePinHigh(BLU_PIN); }
 	return state;
 };
