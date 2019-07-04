@@ -55,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ////////////////////////////////////////////|/////////|/////////|///////////////|//////////|/////////|///////////////////////////////////////////////
   ), [UNRC] = LAYOUT(KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
 ////////|/////////|/////////|/////////|/////////|////////|///////////////////////////////|/////////|/////////|/////////|/////////|/////////|/////////
-        KC_TRNS,  RESET,    KC_NO,    KC_NO,    KC_NO,   KC_NO,                          KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_SLEP,  KC_TRNS,//
+        KC_TRNS,  RESET,    KC_NO,    KC_NO,    KC_NO,   KC_NO,                          KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_TRNS,//
         KC_TRNS,  KC_PIPE,  KC_LCBR,  KC_LBRC,  KC_LPRN, KC_NO,                          KC_NO,    KC_RPRN,  KC_RBRC,  KC_RCBR,  KC_COLN,  KC_TRNS,//
         KC_TRNS,  KC_CTLZ,  KC_CTLX,  KC_CTLC,  KC_CTLV, KC_CTLB,  KC_TRNS,  KC_TRNS,    KC_NO,    KC_UNDS,  KC_PLUS,  KC_PIPE,  MO_RMTA,  KC_TRNS,//
                                             KC_TRNS,  KC_TRNS,  KC_TRNS,        KC_TRNS,   KC_TRNS,  KC_TRNS                                       //
