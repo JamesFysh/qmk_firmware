@@ -28,6 +28,13 @@
 #define KC_MTSL   LT(RMTA, KC_SLSH)
 #define KC_MTPR   LT(LMTA, KC_MPRV)
 
+#define KC_RPS2   LCAG(KC_A)
+
+enum custom_keycodes {
+    KC_SWOS = SAFE_RANGE,
+    KC_PROS,
+};
+
 
 // Since our quirky block definitions are basically a list of comma separated
 // arguments, we need a wrapper in order for these definitions to be
@@ -69,7 +76,33 @@
 #define ___RMTA_L2___ ___TRNS______
 #define ___RMTA_L3___ ___TRNS______
 #define ___RMTA_R1___ ___TRNS______
-#define ___RMTA_R2___ _______,  KC_RALT,  KC_RGUI,  KC_RCTL,  _______
+#define ___RMTA_R2___ _______,  KC_RALT,  KC_RGUI,  KC_RCTL, _______
 #define ___RMTA_R3___ ___TRNS______
 
+#define ___L3OX_L1___ XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_PROS, KC_SWOS
+#define ___L3OX_L2___ XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_TAB,  XXXXXXX
+#define ___L3OX_L3___ XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX
+#define ___L3OX_R1___ XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX
+#define ___L3OX_R2___ XXXXXXX,  KC_RGUI,  XXXXXXX,  XXXXXXX, XXXXXXX
+#define ___L3OX_R3___ XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX
 
+#define ___L4AX_L1___ XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX
+#define ___L4AX_L2___ XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX
+#define ___L4AX_L3___ XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX
+#define ___L4AX_R1___ XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX
+#define ___L4AX_R2___ XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX
+#define ___L4AX_R3___ XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX
+
+#define ___L3OL_L1___ _______,  _______,  _______,  _______, _______
+#define ___L3OL_L2___ _______,  _______,  _______,  _______, _______
+#define ___L3OL_L3___ _______,  _______,  _______,  _______, _______
+#define ___L3OL_R1___ _______,  _______,  _______,  _______, _______
+#define ___L3OL_R2___ _______,  KC_RALT,  _______,  _______, _______
+#define ___L3OL_R3___ _______,  _______,  _______,  _______, _______
+
+#define ___L4AL_L1___ _______,  _______,  _______,  _______, _______
+#define ___L4AL_L2___ _______,  _______,  _______,  _______, _______
+#define ___L4AL_L3___ _______,  _______,  _______,  _______, _______
+#define ___L4AL_R1___ _______,  _______,  _______,  _______, _______
+#define ___L4AL_R2___ _______,  _______,  _______,  _______, _______
+#define ___L4AL_R3___ _______,  _______,  _______,  _______, _______
