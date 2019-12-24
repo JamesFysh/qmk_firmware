@@ -1,79 +1,49 @@
 #include QMK_KEYBOARD_H
-
-// Layers
-#define BASE 0  // Base layer
-#define SYMB 1  // Symbols
-#define MVMT 2  // Movement
-#define UNRC 3  // Unreach
-#define LMTA 4  // Left Meta keys
-#define RMTA 5  // Right Meta keys
-
-// Shortened key names
-#define MO_SYMB   MO(SYMB)
-#define MO_MVMT   MO(MVMT)
-#define MO_UNRC   MO(UNRC)
-#define MO_RMTA   MO(RMTA)
-#define TO_BASE   TO(0)
-#define TO_SYMB   TO(1)
-#define TO_MVMT   TO(2)
-#define TO_UNRC   TO(3)
-
-#define KC_LMTZ   LT(LMTA, KC_Z)
-#define KC_MT11   LT(LMTA, KC_F11)
-#define KC_MTSL   LT(RMTA, KC_SLSH)
-#define KC_MTPR   LT(LMTA, KC_MPRV)
-
-// unreach layer keys
-#define KC_CTLZ   LCTL(KC_Z)
-#define KC_CTLX   LCTL(KC_X)
-#define KC_CTLC   LCTL(KC_C)
-#define KC_CTLV   LCTL(KC_V)
-#define KC_CTLB   LCTL(KC_B)
-
+#include "jamesfysh.h"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-	[BASE] = LAYOUT(KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-////////|/////////|/////////|/////////|/////////|////////|///////////////////////////////|/////////|/////////|/////////|/////////|/////////|/////////
-        KC_ESC,   KC_Q,     KC_W,     KC_F,     KC_P,    KC_G,                           KC_J,     KC_L,     KC_U,     KC_Y,     KC_SCLN,  KC_BSPC,//
-        KC_TAB,   KC_A,     KC_R,     KC_S,     KC_T,    KC_D,                           KC_H,     KC_N,     KC_E,     KC_I,     KC_O,     KC_QUOT,//
-        KC_LSFT,  KC_LMTZ,  KC_X,     KC_C,     KC_V,    KC_B,    TO_MVMT,   TO_SYMB,    KC_K,     KC_M,     KC_COMM,  KC_DOT,   KC_MTSL,  KC_RSFT,//
-                                            KC_NO,    KC_SPC,   MO_SYMB,        MO_MVMT,   KC_ENT,   KC_NO                                         //
-////////////////////////////////////////////|/////////|/////////|///////////////|//////////|/////////|///////////////////////////////////////////////
-  ), [SYMB] = LAYOUT(KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-////////|/////////|/////////|/////////|/////////|////////|///////////////////////////////|/////////|/////////|/////////|/////////|/////////|/////////
-        KC_TRNS,  KC_F1,    KC_F2,    KC_F3,    KC_F4,   KC_F5,                          KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_TRNS,//
-        KC_TRNS,  KC_1,     KC_2,     KC_3,     KC_4,    KC_5,                           KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     KC_TRNS,//
-        KC_TRNS,  KC_MT11,  KC_F12,   KC_LBRC,  KC_RBRC, KC_NO,    TO_BASE,  TO_MVMT,    KC_GRV,   KC_MINS,  KC_EQL,   KC_BSLS,  KC_MTSL,  KC_TRNS,//
-                                            KC_TRNS,  KC_TRNS,  KC_TRNS,        KC_TRNS,   KC_TRNS,  KC_TRNS                                       //
-////////////////////////////////////////////|/////////|/////////|///////////////|//////////|/////////|///////////////////////////////////////////////
-  ), [MVMT] = LAYOUT(KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-////////|/////////|/////////|/////////|/////////|////////|///////////////////////////////|/////////|/////////|/////////|/////////|/////////|/////////
-        KC_TRNS,  KC_MPLY,  KC_WH_U,  KC_UP,    KC_WH_D, KC_PSCR,                        KC_MUTE,  KC_MEH,   KC_DEL,   KC_INS,   KC_HYPR,  KC_TRNS,//
-        KC_TRNS,  KC_MNXT,  KC_LEFT,  KC_DOWN,  KC_RGHT, KC_PAUS,                        KC_VOLU,  KC_HOME,  KC_PGDN,  KC_PGUP,  KC_END,   KC_TRNS,//
-        KC_TRNS,  KC_MTPR,  KC_WBAK,  KC_WSTP,  KC_WFWD, KC_NO,    TO_SYMB,  TO_BASE,    KC_VOLD,  KC_NO,    KC_NO,    KC_NO,    MO_RMTA,  KC_TRNS,//
-                                            KC_TRNS,  KC_TRNS,  KC_TRNS,        KC_TRNS,   KC_TRNS,  KC_TRNS                                       //
-////////////////////////////////////////////|/////////|/////////|///////////////|//////////|/////////|///////////////////////////////////////////////
-  ), [UNRC] = LAYOUT(KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-////////|/////////|/////////|/////////|/////////|////////|///////////////////////////////|/////////|/////////|/////////|/////////|/////////|/////////
-        KC_TRNS,  RESET,    KC_NO,    KC_NO,    KC_NO,   KC_NO,                          KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_TRNS,//
-        KC_TRNS,  KC_PIPE,  KC_LCBR,  KC_LBRC,  KC_LPRN, KC_NO,                          KC_NO,    KC_RPRN,  KC_RBRC,  KC_RCBR,  KC_COLN,  KC_TRNS,//
-        KC_TRNS,  KC_CTLZ,  KC_CTLX,  KC_CTLC,  KC_CTLV, KC_CTLB,  KC_TRNS,  KC_TRNS,    KC_NO,    KC_UNDS,  KC_PLUS,  KC_PIPE,  MO_RMTA,  KC_TRNS,//
-                                            KC_TRNS,  KC_TRNS,  KC_TRNS,        KC_TRNS,   KC_TRNS,  KC_TRNS                                       //
-////////////////////////////////////////////|/////////|/////////|///////////////|//////////|/////////|///////////////////////////////////////////////
-  ), [LMTA] = LAYOUT(KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-////////|/////////|/////////|/////////|/////////|////////|///////////////////////////////|/////////|/////////|/////////|/////////|/////////|/////////
-        KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS, KC_TRNS,                        KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,//
-        KC_TRNS,  KC_TRNS,  KC_LCTL,  KC_LGUI,  KC_LALT, KC_TRNS,                        KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,//
-        KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS, KC_TRNS,  KC_TRNS,  KC_TRNS,    KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,//
-                                            KC_TRNS,  KC_TRNS,  KC_TRNS,        KC_TRNS,   KC_TRNS,  KC_TRNS                                       //
-////////////////////////////////////////////|/////////|/////////|///////////////|//////////|/////////|///////////////////////////////////////////////
-  ), [RMTA] = LAYOUT(KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-////////|/////////|/////////|/////////|/////////|////////|///////////////////////////////|/////////|/////////|/////////|/////////|/////////|/////////
-        KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS, KC_TRNS,                        KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,//
-        KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS, KC_TRNS,                        KC_TRNS,  KC_RALT,  KC_RGUI,  KC_RCTL,  KC_TRNS,  KC_TRNS,//
-        KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS, KC_TRNS,  KC_TRNS,  KC_TRNS,    KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,//
-                                            KC_TRNS,  KC_TRNS,  KC_TRNS,        KC_TRNS,   KC_TRNS,  KC_TRNS                                       //
-////////////////////////////////////////////|/////////|/////////|///////////////|//////////|/////////|///////////////////////////////////////////////
+	[BASE] = LAYOUT(
+	    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        KC_ESC,  KC_Q,    KC_W,    KC_F,    KC_P,    KC_G,                      KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN, KC_BSPC,
+        KC_TAB,  KC_A,    KC_R,    KC_S,    KC_T,    KC_D,                      KC_H,    KC_N,    KC_E,    KC_I,    KC_O,    KC_QUOT,
+        KC_LSFT, KC_LMTZ, KC_X,    KC_C,    KC_V,    KC_B,    XXXXXXX, XXXXXXX, KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_MTSL, KC_RSFT,
+                                   MO_L3OX, KC_SPC,  MO_SYMB,                   MO_MVMT, KC_ENT,  MO_L4AX
+  ), [SYMB] = LAYOUT_iris_wrapper(
+        ___SYMB_L1___, ___SYMB_R1___,
+        ___SYMB_L2___, ___SYMB_R2___,
+        ___SYMB_L3___, ___SYMB_R3___
+  ), [MVMT] = LAYOUT_iris_wrapper(
+        ___MVMT_L1___, ___MVMT_R1___,
+        ___MVMT_L2___, ___MVMT_R2___,
+        ___MVMT_L3___, ___MVMT_R3___
+  ), [UNRC] = LAYOUT_iris_wrapper(
+        ___UNRC_L1___, ___UNRC_R1___,
+        ___UNRC_L2___, ___UNRC_R2___,
+        ___UNRC_L3___, ___UNRC_R3___
+  ), [LMTA] = LAYOUT_iris_wrapper(
+        ___LMTA_L1___, ___LMTA_R1___,
+        ___LMTA_L2___, ___LMTA_R2___,
+        ___LMTA_L3___, ___LMTA_R3___
+ ), [RMTA] = LAYOUT_iris_wrapper(
+        ___RMTA_L1___, ___RMTA_R1___,
+        ___RMTA_L2___, ___RMTA_R2___,
+        ___RMTA_L3___, ___RMTA_R3___
+ ), [L3OX] = LAYOUT_iris_wrapper(
+       ___RMTA_L1___, ___RMTA_R1___,
+       ___RMTA_L2___, ___RMTA_R2___,
+       ___RMTA_L3___, ___RMTA_R3___
+ ), [L4AX] = LAYOUT_iris_wrapper(
+       ___RMTA_L1___, ___RMTA_R1___,
+       ___RMTA_L2___, ___RMTA_R2___,
+       ___RMTA_L3___, ___RMTA_R3___
+ ), [L3OL] = LAYOUT_iris_wrapper(
+       ___RMTA_L1___, ___RMTA_R1___,
+       ___RMTA_L2___, ___RMTA_R2___,
+       ___RMTA_L3___, ___RMTA_R3___
+ ), [L4AL] = LAYOUT_iris_wrapper(
+       ___RMTA_L1___, ___RMTA_R1___,
+       ___RMTA_L2___, ___RMTA_R2___,
+       ___RMTA_L3___, ___RMTA_R3___
  )
 };
 
@@ -82,10 +52,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #define BLU_PIN C6
 
 // Initialize LED lighting
-void keyboard_post_init_user(void) {
+void keyboard_pre_init_user(void) {
     setPinOutput(RED_PIN);
     setPinOutput(GRN_PIN);
     setPinOutput(BLU_PIN);
+    writePinLow(RED_PIN);
+    writePinLow(GRN_PIN);
+    writePinLow(BLU_PIN);
 };
 
 // Turn on LED lighting according to layer
@@ -94,8 +67,8 @@ uint32_t layer_state_set_user(uint32_t state) {
     writePinLow(GRN_PIN);
     writePinLow(BLU_PIN);
 	state = update_tri_layer_state(state, SYMB, MVMT, UNRC);
-    if (state & 1<<UNRC) { 
-        writePinHigh(BLU_PIN); 
+    if (state & 1<<UNRC) {
+        writePinHigh(BLU_PIN);
     } else {
         if (state & 1<<SYMB) { writePinHigh(RED_PIN); }
         if (state & 1<<MVMT) { writePinHigh(GRN_PIN); }

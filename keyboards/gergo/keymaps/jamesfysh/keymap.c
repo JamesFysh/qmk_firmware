@@ -7,6 +7,7 @@
  */
 
 #include QMK_KEYBOARD_H
+#include "jamesfysh.h"
 
 // Layers
 #define BASE 0  // Base layer
