@@ -23,3 +23,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define TAPPING_TERM              200
 #define IGNORE_MOD_TAP_INTERRUPT
 
+#define RED_PIN D6
+#define GRN_PIN D5
+#define BLU_PIN D4
