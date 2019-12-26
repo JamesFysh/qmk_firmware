@@ -28,13 +28,18 @@
 #define KC_MTSL     LT(RMTA, KC_SLSH)
 #define KC_MTPR     LT(LMTA, KC_MPRV)
 
+
+// os shortcuts
 #define KC_RPS2     LCAG(KC_A)
+#define I_LOCKX     QK_LCTL | QK_LGUI | KC_Q
+#define I_LOCKL     QK_LGUI | KC_L
 
 
 // pycharm shortcuts
 #define I_PCCMX     QK_LGUI | QK_LSFT | KC_8
 #define I_PUSHX     QK_LGUI | QK_LSFT | KC_K
 #define I_FRMTX     QK_LGUI | QK_LALT | KC_L
+#define I_JOINX     QK_LCTL | QK_LSFT | KC_J
 #define I_PCCML     QK_LALT | QK_LSFT | KC_INS
 #define I_PUSHL     QK_LCTL | QK_LSFT | KC_K
 #define I_FRMTL     QK_LCTL | QK_LALT | KC_L
@@ -86,9 +91,9 @@ enum custom_keycodes {
 #define ___MVMT_R2___ KC_VOLU,  KC_HOME,  KC_PGDN,  KC_PGUP,  KC_END
 #define ___MVMT_R3___ KC_VOLD,  XXXXXXX,  XXXXXXX,  XXXXXXX,  MO_RMTA
 
-#define ___UNRC_L1___ XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX
-#define ___UNRC_L2___ KC_PIPE,  KC_LCBR,  KC_LBRC,  KC_LPRN, XXXXXXX
-#define ___UNRC_L3___ XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX
+#define ___UNRC_L1___ XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX
+#define ___UNRC_L2___ KC_PIPE,  KC_LCBR,  KC_LBRC,  KC_LPRN,  XXXXXXX
+#define ___UNRC_L3___ XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX
 #define ___UNRC_R1___ XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX
 #define ___UNRC_R2___ XXXXXXX,  KC_RPRN,  KC_RBRC,  KC_RCBR,  KC_COLN
 #define ___UNRC_R3___ XXXXXXX,  KC_UNDS,  KC_PLUS,  KC_PIPE,  MO_RMTA
@@ -110,21 +115,21 @@ enum custom_keycodes {
 #define ___L3OX_L1___ XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_PROS, KC_SWOS
 #define ___L3OX_L2___ XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_TAB,  XXXXXXX
 #define ___L3OX_L3___ XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX
-#define ___L3OX_R1___ XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX
+#define ___L3OX_R1___ XXXXXXX,  I_LOCKX,  XXXXXXX,  XXXXXXX, XXXXXXX
 #define ___L3OX_R2___ XXXXXXX,  KC_RGUI,  XXXXXXX,  XXXXXXX, XXXXXXX
 #define ___L3OX_R3___ XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX
 
 #define ___L4AX_L1___ XXXXXXX,  XXXXXXX,  I_FRMTX,  I_PUSHX, XXXXXXX
 #define ___L4AX_L2___ I_SALLX,  I_PRWDX,  XXXXXXX,  I_NXWDX, XXXXXXX
 #define ___L4AX_L3___ I_UNDOX,  I_CUTTX,  I_COPYX,  I_PASTX, XXXXXXX
-#define ___L4AX_R1___ XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX
+#define ___L4AX_R1___ I_JOINX,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX
 #define ___L4AX_R2___ XXXXXXX,  XXXXXXX,  I_PCCMX,  XXXXXXX, XXXXXXX
 #define ___L4AX_R3___ XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX
 
 #define ___L3OL_L1___ _______,  _______,  _______,  _______, _______
 #define ___L3OL_L2___ _______,  _______,  _______,  _______, _______
 #define ___L3OL_L3___ _______,  _______,  _______,  _______, _______
-#define ___L3OL_R1___ _______,  _______,  _______,  _______, _______
+#define ___L3OL_R1___ _______,  I_LOCKL,  _______,  _______, _______
 #define ___L3OL_R2___ _______,  KC_RALT,  _______,  _______, _______
 #define ___L3OL_R3___ _______,  _______,  _______,  _______, _______
 
