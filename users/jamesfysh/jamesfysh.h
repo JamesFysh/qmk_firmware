@@ -40,9 +40,13 @@
 #define I_PUSHX     QK_LGUI | QK_LSFT | KC_K
 #define I_FRMTX     QK_LGUI | QK_LALT | KC_L
 #define I_JOINX     QK_LCTL | QK_LSFT | KC_J
+#define I_PRVLX     QK_LGUI | KC_LBRC
+#define I_NXTLX     QK_LGUI | KC_RBRC
 #define I_PCCML     QK_LALT | QK_LSFT | KC_INS
 #define I_PUSHL     QK_LCTL | QK_LSFT | KC_K
 #define I_FRMTL     QK_LCTL | QK_LALT | KC_L
+#define I_PRVLL     QK_LCTL | QK_LALT | KC_LEFT
+#define I_NXTLL     QK_LCTL | QK_LALT | KC_RGHT
 
 // slack
 #define I_QUSWX     QK_LGUI | KC_K
@@ -133,7 +137,7 @@ enum custom_keycodes {
 #define ___L4AX_L3___ I_UNDOX,  I_CUTTX,  I_COPYX,  I_PASTX, XXXXXXX
 #define ___L4AX_R1___ I_JOINX,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX
 #define ___L4AX_R2___ XXXXXXX,  I_OPNTX,  I_PCCMX,  I_QUSWX, XXXXXXX
-#define ___L4AX_R3___ XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX
+#define ___L4AX_R3___ XXXXXXX,  I_PRVLX,  I_NXTLX,  XXXXXXX, XXXXXXX
 
 #define ___L3OL_L1___ _______,  _______,  _______,  KC_PROS, KC_SWOS
 #define ___L3OL_L2___ _______,  _______,  _______,  KC_TAB,  _______
@@ -147,4 +151,4 @@ enum custom_keycodes {
 #define ___L4AL_L3___ I_UNDOL,  I_CUTTL,  I_COPYL,  I_PASTL, _______
 #define ___L4AL_R1___ _______,  _______,  _______,  _______, _______
 #define ___L4AL_R2___ _______,  I_OPNTL,  I_PCCML,  I_QUSWL, _______
-#define ___L4AL_R3___ _______,  _______,  _______,  _______, _______
+#define ___L4AL_R3___ _______,  I_PRVLL,  I_NXTLL,  _______, _______
