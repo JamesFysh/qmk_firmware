@@ -126,10 +126,10 @@ enum custom_keycodes {
 #define ___RMTA_R3___ __5X_TRNS__
 
 #define ___L3OX_L1___ XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_PROS, KC_SWOS
-#define ___L3OX_L2___ XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_TAB,  XXXXXXX
+#define ___L3OX_L2___ XXXXXXX,  XXXXXXX,  KC_RGUI,  KC_TAB,  XXXXXXX
 #define ___L3OX_L3___ KC_RPS2,  XXXXXXX,  XXXXXXX,  KC_KBVS, XXXXXXX
 #define ___L3OX_R1___ XXXXXXX,  I_LOCKX,  XXXXXXX,  XXXXXXX, XXXXXXX
-#define ___L3OX_R2___ XXXXXXX,  KC_RGUI,  XXXXXXX,  XXXXXXX, XXXXXXX
+#define ___L3OX_R2___ XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX
 #define ___L3OX_R3___ XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX
 
 #define ___L4AX_L1___ XXXXXXX,  XXXXXXX,  I_FRMTX,  I_PUSHX, XXXXXXX
@@ -140,10 +140,10 @@ enum custom_keycodes {
 #define ___L4AX_R3___ XXXXXXX,  I_PRVLX,  I_NXTLX,  XXXXXXX, XXXXXXX
 
 #define ___L3OL_L1___ _______,  _______,  _______,  KC_PROS, KC_SWOS
-#define ___L3OL_L2___ _______,  _______,  _______,  KC_TAB,  _______
+#define ___L3OL_L2___ _______,  _______,  KC_RALT,  KC_TAB,  _______
 #define ___L3OL_L3___ XXXXXXX,  _______,  _______,  KC_KBVS, _______
 #define ___L3OL_R1___ _______,  I_LOCKL,  _______,  _______, _______
-#define ___L3OL_R2___ _______,  KC_RALT,  _______,  _______, _______
+#define ___L3OL_R2___ _______,  _______,  _______,  _______, _______
 #define ___L3OL_R3___ _______,  _______,  _______,  _______, _______
 
 #define ___L4AL_L1___ _______,  _______,  I_FRMTL,  I_PUSHL, _______
