@@ -38,6 +38,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             case KC_EMAL:
                 SEND_STRING("james.fysh@gmail.com");
                 break;
+            case KC_WREM:
+                SEND_STRING("james.fysh@alliancesoftware.com.au");
+                break;
         }
     }
     return true;

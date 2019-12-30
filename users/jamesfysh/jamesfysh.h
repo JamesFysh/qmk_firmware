@@ -80,6 +80,7 @@ enum custom_keycodes {
     KC_PROS,
     KC_KBVS,
     KC_EMAL,
+    KC_WREM,
 };
 
 
@@ -126,7 +127,7 @@ enum custom_keycodes {
 #define ___RMTA_R2___ _______,  KC_RALT,  KC_RGUI,  KC_RCTL, _______
 #define ___RMTA_R3___ __5X_TRNS__
 
-#define ___L3OX_L1___ XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_PROS, KC_SWOS
+#define ___L3OX_L1___ XXXXXXX,  KC_WREM,  XXXXXXX,  KC_PROS, KC_SWOS
 #define ___L3OX_L2___ XXXXXXX,  XXXXXXX,  KC_RGUI,  KC_TAB,  XXXXXXX
 #define ___L3OX_L3___ KC_RPS2,  XXXXXXX,  XXXXXXX,  KC_KBVS, XXXXXXX
 #define ___L3OX_R1___ XXXXXXX,  I_LOCKX,  XXXXXXX,  XXXXXXX, XXXXXXX
