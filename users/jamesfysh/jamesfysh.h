@@ -79,6 +79,7 @@ enum custom_keycodes {
     KC_SWOS = SAFE_RANGE,
     KC_PROS,
     KC_KBVS,
+    KC_EMAL,
 };
 
 
@@ -129,7 +130,7 @@ enum custom_keycodes {
 #define ___L3OX_L2___ XXXXXXX,  XXXXXXX,  KC_RGUI,  KC_TAB,  XXXXXXX
 #define ___L3OX_L3___ KC_RPS2,  XXXXXXX,  XXXXXXX,  KC_KBVS, XXXXXXX
 #define ___L3OX_R1___ XXXXXXX,  I_LOCKX,  XXXXXXX,  XXXXXXX, XXXXXXX
-#define ___L3OX_R2___ XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX
+#define ___L3OX_R2___ XXXXXXX,  XXXXXXX,  KC_EMAL,  XXXXXXX, XXXXXXX
 #define ___L3OX_R3___ XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX
 
 #define ___L4AX_L1___ XXXXXXX,  XXXXXXX,  I_FRMTX,  I_PUSHX, XXXXXXX

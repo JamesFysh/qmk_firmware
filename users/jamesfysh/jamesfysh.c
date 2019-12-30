@@ -33,7 +33,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 }
                 break;
             case KC_KBVS:
-                SEND_STRING("v0.0.4");
+                SEND_STRING("v0.0.5");
+                break;
+            case KC_EMAL:
+                SEND_STRING("james.fysh@gmail.com");
                 break;
         }
     }
