@@ -10,8 +10,8 @@
 #define PRODUCT         JF Dactyl Manuform
 
 /* key matrix size */
-#define MATRIX_ROWS 8
-#define MATRIX_COLS 8
+#define MATRIX_ROWS 3
+#define MATRIX_COLS 3
 
 /*
  * Keyboard Matrix Assignments
@@ -23,8 +23,8 @@
  *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  *
 */
-#define MATRIX_COL_PINS { B0, B1, B2, B3, B4, B5, B6, B7, }
-#define MATRIX_ROW_PINS { B8, B9, B10, B11, B12, B13, B14, B15, }
+#define MATRIX_COL_PINS { B0, B1, B2 }  //, B3, B4, B5, B6, B7, }
+#define MATRIX_ROW_PINS { A0, A1, A2 }  //B8, B9, B10, B11, B12, B13, B14, B15, }
 #define UNUSED_PINS
 
 /* COL2ROW, ROW2COL*/
