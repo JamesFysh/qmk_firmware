@@ -89,6 +89,7 @@ enum custom_keycodes {
 // expanded before being used as arguments to the LAYOUT_xxx macro.
 #define LAYOUT_gergo_wrapper(...)       LAYOUT_30_gergo(__VA_ARGS__)
 #define LAYOUT_iris_wrapper(...)        LAYOUT_30_iris(__VA_ARGS__)
+#define LAYOUT_endgame_wrapper(...)     LAYOUT_30_endgame(__VA_ARGS__)
 
 #define __5X_TRNS__ _______,  _______,  _______,  _______,  _______
 
@@ -127,12 +128,12 @@ enum custom_keycodes {
 #define ___RMTA_R2___ _______,  KC_RALT,  KC_RGUI,  KC_RCTL, _______
 #define ___RMTA_R3___ __5X_TRNS__
 
-#define ___L3OX_L1___ XXXXXXX,  KC_WREM,  XXXXXXX,  KC_PROS, KC_SWOS
-#define ___L3OX_L2___ XXXXXXX,  XXXXXXX,  KC_RGUI,  KC_TAB,  XXXXXXX
-#define ___L3OX_L3___ KC_RPS2,  I_CUTTX,  I_COPYX,  I_PASTX, XXXXXXX
+#define ___L3OX_L1___ XXXXXXX,  KC_WREM,  XXXXXXX,  XXXXXXX, KC_SWOS
+#define ___L3OX_L2___ XXXXXXX,  XXXXXXX,  KC_RGUI,  KC_TAB,  KC_PROS
+#define ___L3OX_L3___ KC_RPS2,  I_CUTTX,  I_COPYX,  I_PASTX, KC_KBVS
 #define ___L3OX_R1___ XXXXXXX,  I_LOCKX,  XXXXXXX,  XXXXXXX, XXXXXXX
 #define ___L3OX_R2___ XXXXXXX,  XXXXXXX,  KC_EMAL,  XXXXXXX, XXXXXXX
-#define ___L3OX_R3___ XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX
+#define ___L3OX_R3___ RESET,    XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX
 
 #define ___L4AX_L1___ XXXXXXX,  XXXXXXX,  I_FRMTX,  I_PUSHX, XXXXXXX
 #define ___L4AX_L2___ I_SALLX,  I_PRWDX,  XXXXXXX,  I_NXWDX, XXXXXXX
@@ -141,7 +142,7 @@ enum custom_keycodes {
 #define ___L4AX_R2___ XXXXXXX,  I_OPNTX,  I_PCCMX,  I_QUSWX, XXXXXXX
 #define ___L4AX_R3___ XXXXXXX,  I_PRVLX,  I_NXTLX,  XXXXXXX, XXXXXXX
 
-#define ___L3OL_L1___ _______,  _______,  _______,  KC_PROS, KC_SWOS
+#define ___L3OL_L1___ _______,  _______,  _______,  _______, _______
 #define ___L3OL_L2___ _______,  _______,  KC_RALT,  KC_TAB,  _______
 #define ___L3OL_L3___ XXXXXXX,  I_CUTTL,  I_COPYL,  I_PASTL, _______
 #define ___L3OL_R1___ _______,  I_LOCKL,  _______,  _______, _______

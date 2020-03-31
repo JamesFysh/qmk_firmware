@@ -32,6 +32,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define TAPPING_TERM              200
 #define IGNORE_MOD_TAP_INTERRUPT
 
+#define USE_INDICATOR_LED
 #define RED_PIN F4
 #define GRN_PIN F5
 #define BLU_PIN C6

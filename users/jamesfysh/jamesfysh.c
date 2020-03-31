@@ -6,9 +6,11 @@ bool is_osx;
 
 // Initialize LED lighting
 void keyboard_pre_init_user(void) {
-    setPinOutput(RED_PIN);
-    setPinOutput(GRN_PIN);
-    setPinOutput(BLU_PIN);
+    #ifdef USE_INDICATOR_LED
+        setPinOutput(RED_PIN);
+        setPinOutput(GRN_PIN);
+        setPinOutput(BLU_PIN);
+    #endif
     is_osx = true;
 };
 
@@ -33,7 +35,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 }
                 break;
             case KC_KBVS:
-                SEND_STRING("v0.0.5");
+                SEND_STRING("v1.0.0");
                 break;
             case KC_EMAL:
                 SEND_STRING("james.fysh@gmail.com");
@@ -48,38 +50,39 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 
 uint32_t layer_state_set_user(uint32_t state) {
-    // Turn off all LED lighting
-    writePinLow(RED_PIN);
-    writePinLow(GRN_PIN);
-    writePinLow(BLU_PIN);
-
     // Determine tri-state for UNRC
 	state = update_tri_layer_state(state, SYMB, MVMT, UNRC);
 
-    // Turn on lighting to indicate active layer
-    if (state & 1<<UNRC) {
-        writePinHigh(BLU_PIN);
-    } else {
-        if (state & 1<<SYMB) { writePinHigh(RED_PIN); }
-        if (state & 1<<MVMT) { writePinHigh(GRN_PIN); }
-    }
-
     // Activate Linux layers rather than OSX layers, if in linux mode
     state &= ~(1 << L3OL | 1 << L4AL);
-    if (state & 1<<L3OX) {
-        if (!is_osx) {
-            state |= 1 << L3OL;
-        }
-        writePinHigh(RED_PIN);
-        writePinHigh(BLU_PIN);
+    if (state & 1<<L3OX && !is_osx) {
+        state |= 1 << L3OL;
+    }
+    if (state & 1<<L4AX && !is_osx) {
+        state |= 1 << L4AL;
+    }
 
-    }
-    if (state & 1<<L4AX) {
-        if (!is_osx) {
-            state |= 1 << L4AL;
+    #ifdef USE_INDICATOR_LED
+        // Turn off all LED lighting
+        writePinLow(RED_PIN);
+        writePinLow(GRN_PIN);
+        writePinLow(BLU_PIN);
+
+        // Turn on lighting to indicate active layer
+        if (state & 1<<UNRC) {
+            writePinHigh(BLU_PIN);
+        } else {
+            if (state & 1<<SYMB) { writePinHigh(RED_PIN); }
+            if (state & 1<<MVMT) { writePinHigh(GRN_PIN); }
         }
-        writePinHigh(GRN_PIN);
-        writePinHigh(BLU_PIN);
-    }
+        if (state & 1<<L3OX) {
+            writePinHigh(RED_PIN);
+            writePinHigh(BLU_PIN);
+        }
+        if (state & 1<<L4AX) {
+            writePinHigh(GRN_PIN);
+            writePinHigh(BLU_PIN);
+        }
+    #endif
     return state;
 };

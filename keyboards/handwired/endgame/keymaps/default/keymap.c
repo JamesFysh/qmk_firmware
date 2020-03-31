@@ -14,17 +14,22 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include QMK_KEYBOARD_H
+#include "jamesfysh.h"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(
-        KC_A, KC_B, KC_C,
-        KC_D, KC_E, KC_F,
-        KC_G, KC_H, KC_I
-    ) 
+        KC_ESC,  KC_Q,    KC_W,    KC_F,    KC_P,    KC_G,                      KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN, KC_BSPC,
+        KC_TAB,  KC_A,    KC_R,    KC_S,    KC_T,    KC_D,                      KC_H,    KC_N,    KC_E,    KC_I,    KC_O,    KC_QUOT,
+        KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                      KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
+                          KC_1,    KC_2,    KC_3,    KC_4,                      KC_5,    KC_6,    KC_7,    KC_8,
+                                            KC_A,    KC_B,                      KC_C,    KC_D,
+                                            KC_E,    KC_F,                      KC_G,    RESET)
 };
 
-void matrix_init_user(void) {
+void keyboard_post_init_user(void) {
+}
 
+void matrix_init_user(void) {
 }
 
 void matrix_scan_user(void) {
@@ -37,5 +42,4 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 }
 
 void led_set_user(uint8_t usb_led) {
-
 }

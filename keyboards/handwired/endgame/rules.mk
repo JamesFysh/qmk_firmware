@@ -2,6 +2,7 @@
 MCU = STM32F303
 
 
+CONSOLE_ENABLE = yes
 EXTRAKEY_ENABLE = yes # Audio control and System control
 
 RGB_LIGHT_ENABLE = WS2812
