@@ -14,6 +14,18 @@ void keyboard_pre_init_user(void) {
     is_osx = true;
 };
 
+void keyboard_post_init_user(void) {
+    #ifdef USE_INDICATOR_LED
+        writePinLow(RED_PIN);
+        writePinLow(GRN_PIN);
+        writePinLow(BLU_PIN);
+    #endif
+
+    #ifdef RGBLIGHT_ENABLE
+        rgblight_setrgb(0, 0, 0);
+    #endif
+}
+
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     if (record->event.pressed) {
@@ -35,7 +47,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 }
                 break;
             case KC_KBVS:
-                SEND_STRING("v1.0.0");
+                SEND_STRING("v1.1.0");
                 break;
             case KC_EMAL:
                 SEND_STRING("james.fysh@gmail.com");
@@ -83,6 +95,18 @@ uint32_t layer_state_set_user(uint32_t state) {
             writePinHigh(GRN_PIN);
             writePinHigh(BLU_PIN);
         }
+    #endif
+
+    #ifdef RGBLIGHT_ENABLE
+        uint8_t r = 0, g = 0, b = 0;
+        if (state) {
+            if (state & 1<<UNRC) { b = 255; }
+            else if (state & 1<<SYMB) { r = 255; }
+            else if (state & 1<<MVMT) { g = 255; }
+            if (state & 1<<L3OX) { r = 255; b = 255; }
+            if (state & 1<<L4AX) { g = 255; b = 255; }
+        }
+        rgblight_setrgb(r, g, b);
     #endif
     return state;
 };

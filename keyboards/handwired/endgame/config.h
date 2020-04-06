@@ -34,6 +34,9 @@
 #define TAPPING_TERM              200
 #define IGNORE_MOD_TAP_INTERRUPT
 
+/* RGB Lighting configuration */
 #define RGB_DI_PIN A3
-#define RGBLED_NUM 6
+#define RGBLED_NUM 3
+#define RGBLIGHT_ANIMATION
+#define RGBLIGHT_LAYERS
 
