@@ -36,3 +36,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RED_PIN F4
 #define GRN_PIN F5
 #define BLU_PIN C6
+
+#define RGB_DI_PIN D3
+#define RGBLED_NUM 12
+#define RGBLED_SPLIT { 6, 6 }
+#define RGBLIGHT_ANIMATIONS

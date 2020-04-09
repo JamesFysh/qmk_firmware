@@ -105,7 +105,7 @@ enum custom_keycodes {
 #define ___MVMT_L3___ KC_MTPR,  KC_WBAK,  KC_WSTP,  KC_WFWD,  XXXXXXX
 #define ___MVMT_R1___ KC_MUTE,  KC_MEH,   KC_DEL,   KC_INS,   KC_HYPR
 #define ___MVMT_R2___ KC_VOLU,  KC_HOME,  KC_PGDN,  KC_PGUP,  KC_END
-#define ___MVMT_R3___ KC_VOLD,  RGB_TOG,  XXXXXXX,  XXXXXXX,  MO_RMTA
+#define ___MVMT_R3___ KC_VOLD,  RGB_TOG,  RGB_MOD,  RGB_VAI,  MO_RMTA
 
 #define ___UNRC_L1___ XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX
 #define ___UNRC_L2___ KC_PIPE,  KC_LCBR,  KC_LBRC,  KC_LPRN,  XXXXXXX
