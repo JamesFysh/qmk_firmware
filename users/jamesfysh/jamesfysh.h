@@ -1,5 +1,9 @@
 #include "layout_helpers.h"
 
+// Leader-key for all keyboards
+#define LEADER_PER_KEY_TIMING
+#define LEADER_TIMEOUT 300
+
 // Layers
 #define     BASE 0  // Base layer
 #define     SYMB 1  // Symbols
@@ -131,21 +135,21 @@ enum custom_keycodes {
 #define ___L3OX_L1___ XXXXXXX,  KC_WREM,  XXXXXXX,  XXXXXXX, KC_SWOS
 #define ___L3OX_L2___ XXXXXXX,  XXXXXXX,  KC_RGUI,  KC_TAB,  KC_PROS
 #define ___L3OX_L3___ KC_RPS2,  I_CUTTX,  I_COPYX,  I_PASTX, KC_KBVS
-#define ___L3OX_R1___ XXXXXXX,  I_LOCKX,  XXXXXXX,  XXXXXXX, XXXXXXX
+#define ___L3OX_R1___ XXXXXXX,  KC_LEAD,  XXXXXXX,  I_LOCKX, XXXXXXX
 #define ___L3OX_R2___ XXXXXXX,  XXXXXXX,  KC_EMAL,  XXXXXXX, XXXXXXX
 #define ___L3OX_R3___ RESET,    XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX
 
 #define ___L4AX_L1___ XXXXXXX,  XXXXXXX,  I_FRMTX,  I_PUSHX, XXXXXXX
 #define ___L4AX_L2___ I_SALLX,  I_PRWDX,  XXXXXXX,  I_NXWDX, XXXXXXX
 #define ___L4AX_L3___ I_UNDOX,  I_CUTTX,  I_COPYX,  I_PASTX, XXXXXXX
-#define ___L4AX_R1___ I_JOINX,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX
+#define ___L4AX_R1___ I_JOINX,  KC_LEAD,  XXXXXXX,  XXXXXXX, XXXXXXX
 #define ___L4AX_R2___ XXXXXXX,  I_OPNTX,  I_PCCMX,  I_QUSWX, XXXXXXX
 #define ___L4AX_R3___ XXXXXXX,  I_PRVLX,  I_NXTLX,  XXXXXXX, XXXXXXX
 
 #define ___L3OL_L1___ _______,  _______,  _______,  _______, _______
 #define ___L3OL_L2___ _______,  _______,  KC_RALT,  KC_TAB,  _______
 #define ___L3OL_L3___ XXXXXXX,  I_CUTTL,  I_COPYL,  I_PASTL, _______
-#define ___L3OL_R1___ _______,  I_LOCKL,  _______,  _______, _______
+#define ___L3OL_R1___ _______,  _______,  _______,  I_LOCKL, _______
 #define ___L3OL_R2___ _______,  _______,  _______,  _______, _______
 #define ___L3OL_R3___ _______,  _______,  _______,  _______, _______
 
