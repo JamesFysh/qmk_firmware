@@ -1,9 +1,5 @@
 #include "layout_helpers.h"
 
-// Leader-key for all keyboards
-#define LEADER_PER_KEY_TIMING
-#define LEADER_TIMEOUT 300
-
 // Layers
 #define     BASE 0  // Base layer
 #define     SYMB 1  // Symbols
@@ -25,6 +21,12 @@
 #define MO_RMTA     MO(RMTA)
 #define MO_L3OX     MO(L3OX)
 #define MO_L4AX     MO(L4AX)
+
+#define TO_BASE     TO(BASE)
+#define TO_SYMB     TO(SYMB)
+#define TO_MVMT     TO(MVMT)
+#define TO_L3OX     TO(L3OX)
+#define TO_L4AX     TO(L4AX)
 
 // For activating L/R Meta layers (layer-tap)
 #define KC_LMTZ     LT(LMTA, KC_Z)

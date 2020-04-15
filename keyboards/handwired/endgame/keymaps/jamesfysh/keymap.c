@@ -24,7 +24,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LSFT, KC_LMTZ, KC_X,    KC_C,    KC_V,    KC_B,     KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_MTSL, KC_RSFT,
                           KC_LPRN, KC_RPRN, MO_L3OX, KC_SPC,   KC_ENT,  MO_L4AX, KC_LBRC, KC_RBRC,
                                             MO_SYMB, MO_SYMB,  MO_MVMT, MO_MVMT,
-                                            KC_NO,   KC_NO,    KC_NO,   KC_NO
+                                            TO_SYMB, TO_L3OX,  TO_L4AX, TO_MVMT
     ),
     [SYMB] = LAYOUT_endgame_wrapper(
        ___SYMB_L1___, ___SYMB_R1___,

@@ -35,8 +35,12 @@
 #define IGNORE_MOD_TAP_INTERRUPT
 
 /* RGB Lighting configuration */
+#define USE_WS_INDICATOR_LED
 #define RGB_DI_PIN A3
 #define RGBLED_NUM 3
 #define RGBLIGHT_ANIMATION
 #define RGBLIGHT_LAYERS
 
+/* Leader-key configuration */
+#define LEADER_PER_KEY_TIMING
+#define LEADER_TIMEOUT 250
