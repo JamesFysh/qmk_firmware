@@ -141,8 +141,8 @@ enum custom_keycodes {
 #define ___L3OX_R2___ XXXXXXX,  XXXXXXX,  KC_EMAL,  XXXXXXX, XXXXXXX
 #define ___L3OX_R3___ RESET,    XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX
 
-#define ___L4AX_L1___ XXXXXXX,  XXXXXXX,  I_FRMTX,  I_PUSHX, XXXXXXX
-#define ___L4AX_L2___ I_SALLX,  I_PRWDX,  XXXXXXX,  I_NXWDX, XXXXXXX
+#define ___L4AX_L1___ XXXXXXX,  XXXXXXX,  KC_UP,    I_PUSHX, XXXXXXX
+#define ___L4AX_L2___ I_SALLX,  I_PRWDX,  KC_DOWN,  I_NXWDX, XXXXXXX
 #define ___L4AX_L3___ I_UNDOX,  I_CUTTX,  I_COPYX,  I_PASTX, XXXXXXX
 #define ___L4AX_R1___ I_JOINX,  KC_LEAD,  XXXXXXX,  XXXXXXX, XXXXXXX
 #define ___L4AX_R2___ XXXXXXX,  I_OPNTX,  I_PCCMX,  I_QUSWX, XXXXXXX
@@ -155,7 +155,7 @@ enum custom_keycodes {
 #define ___L3OL_R2___ _______,  _______,  _______,  _______, _______
 #define ___L3OL_R3___ _______,  _______,  _______,  _______, _______
 
-#define ___L4AL_L1___ _______,  _______,  I_FRMTL,  I_PUSHL, _______
+#define ___L4AL_L1___ _______,  _______,  _______,  I_PUSHL, _______
 #define ___L4AL_L2___ I_SALLL,  I_PRWDL,  _______,  I_NXWDL, _______
 #define ___L4AL_L3___ I_UNDOL,  I_CUTTL,  I_COPYL,  I_PASTL, _______
 #define ___L4AL_R1___ _______,  _______,  _______,  _______, _______
